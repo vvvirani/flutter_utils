@@ -13,6 +13,14 @@ class Validator {
     }
   }
 
+  static String? fullNameValidator(String? fullName) {
+    if (fullName?.isNotEmpty ?? false) {
+      return null;
+    } else {
+      return 'Please enter full name';
+    }
+  }
+
   static String? firstNameValidator(String? firstName) {
     if (firstName?.isNotEmpty ?? false) {
       return null;
@@ -26,6 +34,14 @@ class Validator {
       return null;
     } else {
       return 'Please enter last name';
+    }
+  }
+
+  static String? phoneNumberValidator(String? number) {
+    if (number?.isNotEmpty ?? false) {
+      return null;
+    } else {
+      return 'Please enter phone number';
     }
   }
 
