@@ -45,12 +45,16 @@ class Validator {
     }
   }
 
-  static String? passwordValidator(String? password) {
+  static String? passwordValidator(String? password, {bool isStrong = true}) {
     if (password?.isNotEmpty ?? false) {
-      if (isPasswordValid(password)) {
-        return null;
+      if (isStrong) {
+        if (isPasswordValid(password)) {
+          return null;
+        } else {
+          return 'Password must be At least 8 characters,\nAt least 1 upper case letter,\nAt least 1 lower case letter,\nAt least 1 number,\nAt least 1 special character';
+        }
       } else {
-        return 'Password must be At least 8 characters,\nAt least 1 upper case letter,\nAt least 1 lower case letter,\nAt least 1 number,\nAt least 1 special character';
+        return null;
       }
     } else {
       return 'Please enter password';
