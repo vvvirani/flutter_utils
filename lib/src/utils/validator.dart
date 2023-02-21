@@ -51,7 +51,7 @@ class Validator {
         if (isPasswordValid(password)) {
           return null;
         } else {
-          return 'Password must be At least 8 characters,\nAt least 1 upper case letter,\nAt least 1 lower case letter,\nAt least 1 number,\nAt least 1 special character';
+          return 'Password must be At least 8 characters, At least 1 upper case letter, At least 1 lower case letter, At least 1 number, At least 1 special character';
         }
       } else {
         return null;
